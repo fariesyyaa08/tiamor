@@ -77,32 +77,10 @@
       }
     }
 
-    .heart {
-      position: absolute;
-  bottom: -10px;
-  color: rgba(255,255,255,0.8);
-  font-size: 20px;
-  pointer-events: none;
-  animation-name: floatUp;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-    }
-
       .fade-in {
   animation: fadeIn 1.5s ease forwards;
 }
 
-
-    @keyframes floatUp {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-110vh);
-    opacity: 0;
-  }
-}
   </style>
 </head>
 <body>
@@ -165,20 +143,6 @@
       setTimeout(typeText, 30);
      }
   }
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "💗";
-
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 3 + 4) + "s"; // random 4-7s duration
-
-  document.body.appendChild(heart);
-
-  setTimeout(() => heart.remove(), 7000);
-}
-
-  setInterval(createHeart, 300);
 </script>
     </p>
   </div>
