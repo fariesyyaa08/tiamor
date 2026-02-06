@@ -61,6 +61,17 @@
       transform: scale(1.05);
     }
 
+    <img id="coverImage" src="image1.jpg" alt="Cute pic" style="width:80%; margin-top:1rem; border-radius:15px;">
+
+    .fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
     .hidden {
       display: none;
       margin-top: 1rem;
@@ -126,6 +137,8 @@
 
         function reveal() {
           const surprise = document.getElementById("surprise");
+          const coverImage = document.getElementById("coverImage");
+           coverImage.classList.add("fade-out");
           surprise.classList.remove("hidden");
           surprise.classList.add("fade-in");
 
